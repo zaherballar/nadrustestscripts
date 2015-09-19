@@ -1,0 +1,8 @@
+SauceOnDemandSessionID=b941c51b85a449b9b039e5092928c0ef job-name=runTestID03_2[0] : (OS X 10.10 firefox 40.0 1440x900)
+verifyTextPresent failed
+SauceOnDemandSessionID=b941c51b85a449b9b039e5092928c0ef job-name=com.yourcompany.SampleSauceTest.runTestID03_2[0]
+SauceOnDemandSessionID=9a20ead7df3c4869ad046fce605ebf71 job-name=runTestID03_1[0] : (OS X 10.10 firefox 40.0 1440x900)
+verifyTextPresent failed
+verifyTextPresent failed
+verifyTextPresent failed
+SauceOnDemandSessionID=9a20ead7df3c4869ad046fce605ebf71 job-name=com.yourcompany.SampleSauceTest.runTestID03_1[0]
