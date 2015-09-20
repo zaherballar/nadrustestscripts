@@ -170,11 +170,11 @@ public class SauceTest03 implements SauceOnDemandSessionIdProvider {
      */
     @Test
     public void runTestID03_1() throws Exception {
-        driver.get("http://dev.nadrus.com/theme/1");
+    	driver.get(Config.startURL+"/theme/1");
         driver.findElement(By.xpath("//div[5]/div[1]/div/a")).click();
         driver.findElement(By.id("CourseTitles")).click();
         driver.findElement(By.id("CourseTitles")).clear();
-        driver.findElement(By.id("CourseTitles")).sendKeys("مايكروسو�?ت");
+        driver.findElement(By.id("CourseTitles")).sendKeys("مايكروسوفت");
         driver.findElement(By.xpath("//form[@id='CourseSearchForm']/div/div/button")).click();
         if (!driver.findElement(By.tagName("html")).getText().contains("Windows")) {
             System.out.println("verifyTextPresent failed");
@@ -189,17 +189,39 @@ public class SauceTest03 implements SauceOnDemandSessionIdProvider {
     
     @Test
     public void runTestID03_2() throws Exception {
-        driver.get("http://dev.nadrus.com/theme/1");
+    	driver.get(Config.startURL+"/theme/1");
         driver.findElement(By.xpath("//div[5]/div[1]/div/a")).click();
         driver.findElement(By.id("CourseTitles")).click();
         driver.findElement(By.id("CourseTitles")).clear();
-        driver.findElement(By.id("CourseTitles")).sendKeys("مايكروسو�?ت");
-        driver.findElement(By.xpath("//form[@id='CourseSearchForm']/div/div/button")).click();
-        if (!driver.findElement(By.tagName("html")).getText().contains("اندرويد")) {
-            System.out.println("verifyTextPresent failed");
-        }      
+        driver.findElement(By.id("CourseTitles")).sendKeys("اندرويد");
+        driver.findElement(By.xpath("//form[@id='CourseSearchForm']/div/div/button")).click();   
     }
+    
+    @Test
+    public void runTestID03_3() throws Exception {
+        driver.get(Config.startURL+"/theme/1");
+        driver.findElement(By.xpath("//div[5]/div[1]/div/a")).click();
+        driver.findElement(By.id("CourseTitles")).click();
+        driver.findElement(By.id("CourseTitles")).clear();
+        driver.findElement(By.id("CourseTitles")).sendKeys("الاندرويد");
+        driver.findElement(By.xpath("//form[@id='CourseSearchForm']/div/div/button")).click();
+        if (!driver.findElement(By.tagName("html")).getText().contains("تعلم برمجة الأندرويد من الصفر حتى الأحتراف")) {
+            System.out.println("verifyTextPresent failed");
+        }
+    }    
 
+    @Test
+    public void runTestID03_4() throws Exception {
+        driver.get(Config.startURL+"/theme/1");
+        driver.findElement(By.xpath("//div[5]/div[1]/div/a")).click();
+        driver.findElement(By.id("CourseTitles")).click();
+        driver.findElement(By.id("CourseTitles")).clear();
+        driver.findElement(By.id("CourseTitles")).sendKeys("أندرويد");
+        driver.findElement(By.xpath("//form[@id='CourseSearchForm']/div/div/button")).click();
+        if (!driver.findElement(By.tagName("html")).getText().contains("تعلم برمجة الأندرويد من الصفر حتى الأحتراف")) {
+            System.out.println("verifyTextPresent failed");
+        }
+    }
 
     /**
      * Closes the {@link WebDriver} session.
