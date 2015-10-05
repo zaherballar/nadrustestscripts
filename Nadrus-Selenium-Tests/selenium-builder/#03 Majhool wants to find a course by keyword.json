@@ -1,0 +1,141 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "https://dev.nadrus.com/theme/1"
+    },
+    {
+      "type": "get",
+      "url": "https://dev.nadrus.com/view-courses"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "CourseTitles"
+      },
+      "text": "مايكروسوفت"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "button.btn.btn-search"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "برمجة قواعد البيانات باستخدام SQL Server للمطورين المبتدئين"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "مدخل الى مايكروسوفت إكسل Office Excel 2013"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "الدورة المتكاملة لاحتراف MS Office Word 2013"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "أساسيات ويندوز 8 Windows Essentials"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "المهارات المتقدمة في Windows 8"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "مقدمة في باتش -Batch"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "أساسيات OneNote 2013"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "CourseTitles"
+      },
+      "text": "اندرويد"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "button.btn.btn-search"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "تعلم لغة الجافا خطوة بخطوة"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "تعلم برمجة الأندرويد من الصفر حتى الأحتراف"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "صيانة الاجهزة حسب اختبار 220-802 لشهادة A+ من CompTIA"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "CourseTitles"
+      },
+      "text": "الاندرويد"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "button.btn.btn-search"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "تعلم لغة الجافا خطوة بخطوة"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "تعلم برمجة الأندرويد من الصفر حتى الأحتراف"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "صيانة الاجهزة حسب اختبار 220-802 لشهادة A+ من CompTIA"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "CourseTitles"
+      },
+      "text": "أندرويد"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "button.btn.btn-search"
+      }
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "تعلم لغة الجافا خطوة بخطوة"
+    },
+    {
+      "type": "verifyTextPresent",
+      "text": "تعلم برمجة الأندرويد من الصفر حتى الأحتراف"
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

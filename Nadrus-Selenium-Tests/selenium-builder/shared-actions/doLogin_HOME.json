@@ -1,0 +1,68 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://dev.nadrus.com/theme/1"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "دخول"
+      }
+    },
+    {
+      "type": "waitForElementStyle",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='login']"
+      },
+      "propertyName": "display",
+      "value": "block"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "css selector",
+        "value": "#UserLoginForm > div.form-group > div.input-group > #UserUsername"
+      },
+      "text": "${username}"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "css selector",
+        "value": "#UserLoginForm > div.form-group > div.input-group > #UserPassword"
+      },
+      "text": "${password}"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//form[@id='UserLoginForm']/input"
+      }
+    },
+    {
+      "type": "verifyElementPresent",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[4]/header/div[1]/div/div[2]/div[2]/a/img"
+      }
+    }
+  ],
+  "data": {
+    "configs": {
+      "manual": {
+        "username": "dakhil@freeletter.me",
+        "password": "123456"
+      }
+    },
+    "source": "manual"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
