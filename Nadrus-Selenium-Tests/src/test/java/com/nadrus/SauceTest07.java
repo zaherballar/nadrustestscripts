@@ -167,8 +167,25 @@ public class SauceTest07 implements SauceOnDemandSessionIdProvider {
      * @throws Exception
      */
     @Test
-    public void runTestID07() throws Exception {
-        wd.get(Config.startURL+"/theme/1");    wd.get("http://dev.nadrus.com/profile/66/");
+    public void runTestID07_Majhool() throws Exception {
+        wd.get(Config.startURL+"/theme/1");    
+        runTestID07();
+   }
+    
+    /**
+     * #07 Dakhil want to view instructor's courses
+     * https://leantesting.com/en/projects/7121/test-plan/3076/edit
+     * 
+     * @throws Exception
+     */
+    @Test
+    public void runTestID07_Dakhil() throws Exception {
+    	actions.doLogin("dakhil@freeletter.me", "123456", SharedActions.doLogin_HOME);
+    	runTestID07();
+    }
+    
+    public void runTestID07() {  
+        wd.get(Config.startURL+"/profile/66/");
         wd.findElement(By.cssSelector("a[title=\"زيادة الإنتاجية باستخدام Outlook 2013\"] > h1")).click();
         assertEquals("زيادة الإنتاجية باستخدام Outlook 2013 من قبل محمد اسماعيل سويد | ندرس.كوم", wd.getTitle());
         assertEquals("http://dev.nadrus.com/%D8%AF%D9%88%D8%B1%D8%A9/%D8%B2%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%A7%D8%AC%D9%8A%D8%A9-%D8%A8%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-Outlook-2013-218", wd.getCurrentUrl());
@@ -180,6 +197,7 @@ public class SauceTest07 implements SauceOnDemandSessionIdProvider {
         assertTrue(wd.findElement(By.tagName("html")).getText().contains("المهارات المتقدمة في Windows 8"));
         assertTrue(wd.findElement(By.tagName("html")).getText().contains("تعلم صناعة دورة باستخدام Camtasia Studio"));
    }
+    
     /**
      * Closes the {@link WebDriver} session.
      *

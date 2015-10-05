@@ -1,0 +1,16 @@
+{
+  "type": "suite",
+  "seleniumVersion": "2",
+  "formatVersion": 1,
+  "scripts": [
+    {
+      "where": "local",
+      "path": "shared-actions/doLogin_HOME.json"
+    },
+    {
+      "where": "local",
+      "path": "#07 Majhool want to view instructor's courses.json"
+    }
+  ],
+  "shareState": true
+}
