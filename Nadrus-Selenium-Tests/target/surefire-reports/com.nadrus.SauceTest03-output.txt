@@ -1,16 +1,2 @@
-SauceOnDemandSessionID=25ef1a6d03024b60bbb449e656496c8b job-name=runTestID03_1[0] : (OS X 10.10 firefox 40.0 1440x900)
-verifyTextPresent failed
-verifyTextPresent failed
-verifyTextPresent failed
-SauceOnDemandSessionID=25ef1a6d03024b60bbb449e656496c8b job-name=com.nadrus.SauceTest03.runTestID03_1[0]
-SauceOnDemandSessionID=ba565f0e8b934a5a809d395956f12fd6 job-name=runTestID03_2[0] : (OS X 10.10 firefox 40.0 1440x900)
-verifyTextPresent failed
-SauceOnDemandSessionID=ba565f0e8b934a5a809d395956f12fd6 job-name=com.nadrus.SauceTest03.runTestID03_2[0]
-SauceOnDemandSessionID=31875bf91cb047c1a7ab7fc139e7676f job-name=runTestID03_1[1] : (OS X 10.10 chrome 45.0 1440x900)
-verifyTextPresent failed
-verifyTextPresent failed
-verifyTextPresent failed
-SauceOnDemandSessionID=31875bf91cb047c1a7ab7fc139e7676f job-name=com.nadrus.SauceTest03.runTestID03_1[1]
-SauceOnDemandSessionID=e9960604535e449395afdc7bba846abf job-name=runTestID03_2[1] : (OS X 10.10 chrome 45.0 1440x900)
-verifyTextPresent failed
-SauceOnDemandSessionID=e9960604535e449395afdc7bba846abf job-name=com.nadrus.SauceTest03.runTestID03_2[1]
+SauceOnDemandSessionID=8c8f190a4f914d988aab5ed336babf84 job-name=runTestID03_Dakhil[0] : (OS X 10.10 firefox 40.0 1440x900)
+SauceOnDemandSessionID=8c8f190a4f914d988aab5ed336babf84 job-name=com.nadrus.SauceTest03.runTestID03_Dakhil[0]

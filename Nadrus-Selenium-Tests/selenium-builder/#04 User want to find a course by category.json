@@ -1,0 +1,160 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://dev.nadrus.com/theme/1"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='courses']/div/a"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "categories"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "all-courses"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='sidebar-nav']//a[.='برامج اوفيس']"
+      }
+    },
+    {
+      "type": "assertElementPresent",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards']/li[2]/div/a[1]/div/span[1]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//form[@id='CourseSearchFormFilter']/div[1]/div/div/button"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "مدفوع"
+      }
+    },
+    {
+      "type": "assertElementAttribute",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards']/li[1]/div/a[1]/div/span[1]"
+      },
+      "attributeName": "class",
+      "value": "col-md-4 col-sm-3 col-xs-4 price paid"
+    },
+    {
+      "type": "assertElementAttribute",
+      "negated": true,
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards']/li[3]/div/a[1]/div/span[1]"
+      },
+      "attributeName": "class",
+      "value": "col-md-4 col-sm-3 col-xs-4 price free"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//form[@id='CourseSearchFormFilter']/div[1]/div/div/button"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "مجاناً"
+      }
+    },
+    {
+      "type": "assertElementAttribute",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards']/li[1]/div/a[1]/div/span[1]"
+      },
+      "attributeName": "class",
+      "value": "col-md-4 col-sm-3 col-xs-4 price free"
+    },
+    {
+      "type": "assertElementAttribute",
+      "negated": true,
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards']/li[3]/div/a[1]/div/span[1]"
+      },
+      "attributeName": "class",
+      "value": "col-md-4 col-sm-3 col-xs-4 price paid"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "كل"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//form[@id='CourseSearchFormFilter']/div[2]/div/div/button"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "شعبية"
+      }
+    },
+    {
+      "type": "storeText",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards']/li[1]/div/a[1]/div/span[3]/span"
+      },
+      "variable": "most"
+    },
+    {
+      "type": "storeText",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards']/li[2]/div/a[1]/div/span[3]/span"
+      },
+      "variable": "less"
+    },
+    {
+      "type": "assertEval",
+      "script": "return ${most}>=${less} ;",
+      "value": "true"
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

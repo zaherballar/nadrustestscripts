@@ -8,7 +8,7 @@ public class Config {
 	public static final Object[] browsers={
 		   
 		   new String[]{"OS X 10.10", "40.0", "firefox", null, null,"1440x900"},
-		   new String[]{"OS X 10.10", "45.0", "chrome", null, null,"1440x900"}
+		  // new String[]{"OS X 10.10", "45.0", "chrome", null, null,"1440x900"}
    };
     
 
