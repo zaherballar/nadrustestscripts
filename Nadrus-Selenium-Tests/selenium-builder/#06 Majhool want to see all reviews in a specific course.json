@@ -1,0 +1,70 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://dev.nadrus.com/theme/1"
+    },
+    {
+      "type": "get",
+      "url": "http://dev.nadrus.com/c/61"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "div.text-center.mt-30 > a.btn.btn-default"
+      }
+    },
+    {
+      "type": "assertElementPresent",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards-vert']/li[1]/div"
+      }
+    },
+    {
+      "type": "assertElementPresent",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards-vert']/li[1]/div/div[2]/h1/a"
+      }
+    },
+    {
+      "type": "assertElementPresent",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards-vert']/li[1]/div/div[1]/a/img"
+      }
+    },
+    {
+      "type": "assertElementPresent",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards-vert']/li[2]/div"
+      }
+    },
+    {
+      "type": "assertElementPresent",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards-vert']/li[3]/div"
+      }
+    },
+    {
+      "type": "assertElementPresent",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='course-cards-vert']/li[4]/div"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
