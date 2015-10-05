@@ -1,0 +1,67 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://dev.nadrus.com/theme/1"
+    },
+    {
+      "type": "get",
+      "url": "http://dev.nadrus.com/profile/66/"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "css selector",
+        "value": "a[title=\"زيادة الإنتاجية باستخدام Outlook 2013\"] > h1"
+      }
+    },
+    {
+      "type": "assertTitle",
+      "title": "زيادة الإنتاجية باستخدام Outlook 2013 من قبل محمد اسماعيل سويد | ندرس.كوم"
+    },
+    {
+      "type": "assertCurrentUrl",
+      "url": "http://dev.nadrus.com/%D8%AF%D9%88%D8%B1%D8%A9/%D8%B2%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%A7%D8%AC%D9%8A%D8%A9-%D8%A8%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85-Outlook-2013-218"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//div[@id='course']/div/div[2]/div[4]/div/div[3]/a"
+      }
+    },
+    {
+      "type": "assertTextPresent",
+      "text": "جميع دورات محمد اسماعيل سويد"
+    },
+    {
+      "type": "assertTextPresent",
+      "text": "التعرف على أساسيات Skype for Business (لينك Lync سابقاً)"
+    },
+    {
+      "type": "assertTextPresent",
+      "text": "زيادة الإنتاجية باستخدام Outlook 2013"
+    },
+    {
+      "type": "assertTextPresent",
+      "text": "أساسيات OneNote 2013"
+    },
+    {
+      "type": "assertTextPresent",
+      "text": "المهارات المتقدمة في Windows 8"
+    },
+    {
+      "type": "assertTextPresent",
+      "text": "تعلم صناعة دورة باستخدام Camtasia Studio"
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
