@@ -15,7 +15,8 @@ public class SharedActions {
 	
 	public static final int doLogin_HOME=10;
 	public static final int doLogin_HOME_FB=11;
-	public static final int doLogin_DROPDOWN=20;
+	public static final int doLogin_DROPDOWN = 20;
+	public static final int doRegister_DROPDOWN = 20;
 	public static final int doLogin_DROPDOWN_FB=21;
 	public static final int doLogin_LOGINPAGE=30;
 	public static final int doLogin_LOGINPAGE_FB=31;
@@ -46,4 +47,22 @@ public class SharedActions {
 		
 	}
 	
+	public String doRegisterOnFly(int method){
+		if(method==doRegister_DROPDOWN){
+	        String newUsername ="Talib"+System.currentTimeMillis();
+	        wd.findElement(By.id("UserdetailFirstName")).click();
+	        wd.findElement(By.id("UserdetailFirstName")).clear();
+	        wd.findElement(By.id("UserdetailFirstName")).sendKeys(newUsername);
+	        wd.findElement(By.id("UserUsername")).click();
+	        wd.findElement(By.id("UserUsername")).clear();
+	        wd.findElement(By.id("UserUsername")).sendKeys(newUsername + "@freeletter.com");
+	        wd.findElement(By.id("UserPassword")).click();
+	        wd.findElement(By.id("UserPassword")).clear();
+	        wd.findElement(By.id("UserPassword")).sendKeys("123456");
+	        wd.findElement(By.xpath("//form[@id='UserSignupForm']/input[2]")).click();
+	        wd.findElement(By.id("skip")).click();
+	        return newUsername + "@freeletter.com";
+		}
+		return null;
+	}
 }

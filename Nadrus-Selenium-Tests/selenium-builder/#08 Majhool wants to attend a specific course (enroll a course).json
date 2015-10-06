@@ -1,0 +1,97 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://dev.nadrus.com/theme/1"
+    },
+    {
+      "type": "get",
+      "url": "http://dev.nadrus.com/c/139"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "cta"
+      }
+    },
+    {
+      "type": "storeEval",
+      "script": "return \"Dakhil\" + new Date().getTime();",
+      "variable": "newUsername"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "UserdetailFirstName"
+      },
+      "text": "${newUsername}"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "UserUsername"
+      },
+      "text": "${newUsername}@freeletter.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "UserPassword"
+      },
+      "text": "123456"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//form[@id='UserSignupForm']/input[2]"
+      }
+    },
+    {
+      "type": "waitForCurrentUrl",
+      "url": "http://dev.nadrus.com/invite"
+    },
+    {
+      "type": "assertCurrentUrl",
+      "url": "http://dev.nadrus.com/invite"
+    },
+    {
+      "type": "assertText",
+      "locator": {
+        "type": "id",
+        "value": "account"
+      },
+      "text": "${newUsername}"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "skip"
+      }
+    },
+    {
+      "type": "waitForCurrentUrl",
+      "url": "http://dev.nadrus.com/v/761/"
+    },
+    {
+      "type": "assertCurrentUrl",
+      "url": "http://dev.nadrus.com/v/761/"
+    }
+  ],
+  "data": {
+    "configs": {
+      "manual": {}
+    },
+    "source": "manual"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

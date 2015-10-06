@@ -1,0 +1,65 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "waitForElementPresent",
+      "locator": {
+        "type": "css selector",
+        "value": "body[class*='pace-done']"
+      }
+    },
+    {
+      "type": "storeEval",
+      "script": "return \"Talib\" + new Date().getTime();",
+      "variable": "newUsername"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "UserdetailFirstName"
+      },
+      "text": "${newUsername}"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "UserUsername"
+      },
+      "text": "${newUsername}@freeletter.com"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "UserPassword"
+      },
+      "text": "123456"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//form[@id='UserSignupForm']/input[2]"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "skip"
+      }
+    }
+  ],
+  "data": {
+    "configs": {
+      "manual": {}
+    },
+    "source": "manual"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}

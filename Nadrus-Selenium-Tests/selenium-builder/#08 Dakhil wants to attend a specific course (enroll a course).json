@@ -1,0 +1,91 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://dev.nadrus.com/theme/1"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "link text",
+        "value": "دخول"
+      }
+    },
+    {
+      "type": "waitForElementStyle",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='login']"
+      },
+      "propertyName": "display",
+      "value": "block"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "css selector",
+        "value": "#UserLoginForm > div.form-group > div.input-group > #UserUsername"
+      },
+      "text": "${username}"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "css selector",
+        "value": "#UserLoginForm > div.form-group > div.input-group > #UserPassword"
+      },
+      "text": "${password}"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": "//form[@id='UserLoginForm']/input"
+      }
+    },
+    {
+      "type": "get",
+      "url": "http://dev.nadrus.com/c/${courseID}"
+    },
+    {
+      "type": "assertElementPresent",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='cta']"
+      }
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "xpath",
+        "value": ".//*[@id='cta']"
+      }
+    },
+    {
+      "type": "waitForCurrentUrl",
+      "url": "http://dev.nadrus.com/successfuly-enrolled/${courseID}"
+    },
+    {
+      "type": "assertElementPresent",
+      "locator": {
+        "type": "css selector",
+        "value": "body[class*='player-fixed']"
+      }
+    }
+  ],
+  "data": {
+    "configs": {
+      "manual": {
+        "username": "dakhil8@freeletter.me",
+        "password": "123456",
+        "courseID": "135"
+      }
+    },
+    "source": "manual"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
